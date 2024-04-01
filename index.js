@@ -6,18 +6,12 @@ import {format} from "date-fns"
 const app = express();
 const PORT = 4000;
 
-app.get('/',(req,res)=>{
-  res.status(200).json({"message":"Success"});
-})
 
-//get-data
-app.get('/get-data',(req,res)=>{
-  res.status(200).json({message:"Success",data:{name:"Mullaiventhan",role:"admin"}});
-})
+// test console logging
 app.listen(PORT,()=>{
   console.log(`Server is running on port ${PORT}`);
 }) 
-
+// get timestamp of api call and store to timestamp folder 
 app.get("/get-timestamp",(req,res)=>{
  let today = format(new Date(),'dd-MM-yyyy-hh-mm-ss');
  console.log(today);
@@ -28,6 +22,7 @@ app.get("/get-timestamp",(req,res)=>{
 
 });
 
+// get the files from timestamp folder
 app.get("/get-All-Files",(req,res)=>{
   let files = fs.readdirSync("Timestamp");
   res.status(200).send({files});

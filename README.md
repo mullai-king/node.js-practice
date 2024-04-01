@@ -1,8 +1,11 @@
 # Express Timestamp App
 
-This is a simple Express.js application that generates a timestamped text file upon a GET request to the root endpoint ("/"). It also provides an endpoint ("/getTextFiles") to retrieve a list of text files stored in the "TimeStamp" folder.
+This is a simple Express.js 
+## Endpoints
 
-## Getting Started
+`("/")` application that generates a timestamped text file upon a GET request to the root endpoint ("/").
+
+`("/getTextFiles")` It also provides an endpoint ("/getTextFiles") to retrieve a list of text files stored in the "TimeStamp" folder.
 
 ### Prerequisites
 

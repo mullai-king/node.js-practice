@@ -2,10 +2,15 @@
 
 This is a simple Express.js 
 ## Endpoints
+## /
+[https://node-js-practice-1-e6gr.onrender.com/]
 
 `("/")` application that generates a timestamped text file upon a GET request to the root endpoint ("/").
 
-`("/getTextFiles")` It also provides an endpoint ("/getTextFiles") to retrieve a list of text files stored in the "TimeStamp" folder.
+### /get-All-Files 
+[https://node-js-practice-1-e6gr.onrender.com/get-All-Files](Demo)
+
+It also provides an endpoint ("/getTextFiles") to retrieve a list of text files stored in the "TimeStamp" folder.
 
 ### Prerequisites
 

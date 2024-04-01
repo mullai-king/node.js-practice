@@ -13,7 +13,7 @@ app.listen(PORT,()=>{
 }) 
 // get timestamp of api call and store to timestamp folder 
 app.get("/get-timestamp",(req,res)=>{
- let today = format(new Date(),'dd-MM-yyyy-hh-mm-ss');
+ let today = format(convertToIST(new Date()),'dd-MM-yyyy-hh-mm-ss');
  console.log(today);
  const filePath = `Timestamp/${today}.txt`;
  fs.writeFileSync(filePath, `${today}`, 'utf8');

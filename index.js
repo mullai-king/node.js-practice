@@ -13,8 +13,7 @@ app.listen(PORT,()=>{
 }) 
 // get timestamp of api call and store to timestamp folder 
 app.get("/get-timestamp",(req,res)=>{
-  let indiaTime = convertToIST(new Date());
- let today = format(indiaTime,'dd-MM-yyyy-hh-mm-ss');
+ let today = format((new Date().toLocaleString("en-us",{ timeZone: "Asia/Kolkata" })),'dd-MM-yyyy-hh-mm-ss');
  console.log(today);
  const filePath = `Timestamp/${today}.txt`;
  fs.writeFileSync(filePath, `${today}`, 'utf8');

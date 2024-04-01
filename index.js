@@ -12,7 +12,7 @@ app.listen(PORT,()=>{
   console.log(`Server is running on port ${PORT}`);
 }) 
 // get timestamp of api call and store to timestamp folder 
-app.get("/get-timestamp",(req,res)=>{
+app.get("/",(req,res)=>{
  let today = format((new Date().toLocaleString("en-us",{ timeZone: "Asia/Kolkata" })),'dd-MM-yyyy-hh-mm-ss');
  console.log(today);
  const filePath = `Timestamp/${today}.txt`;
